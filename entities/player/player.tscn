@@ -4,18 +4,18 @@
 [ext_resource path="res://entities/player/player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 56, 48 )
+extents = Vector2( 56, 43.664 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 24, 24 )
+position = Vector2( 61.8954, 26.535 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 120, 88 )
+position = Vector2( 120, 83 )
 shape = SubResource( 1 )
 
-[node name="survivor-idle_knife_0" type="Sprite" parent="."]
-position = Vector2( 112.766, 87.1091 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 113.766, 87.1091 )
 scale = Vector2( 0.499135, 0.5 )
 texture = ExtResource( 1 )
 
