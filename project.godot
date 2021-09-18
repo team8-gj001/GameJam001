@@ -14,6 +14,12 @@ config/name="Clockwork 001"
 run/main_scene="res://scenes/tutorial/tut.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/resizable=false
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [input]
 
 move_up={
