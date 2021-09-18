@@ -12,7 +12,7 @@ onready var rayCast = get_node("RayCast2D")
 
 export var speed = 200  # speed in pixels/sec
 
-func get_input():
+func get_input(delta):
 	velocity = Vector2.ZERO # reset velocity every tick
 	if Input.is_action_pressed('move_right'):
 		velocity.x += 1
@@ -27,5 +27,6 @@ func get_input():
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
-	get_input() # seperate this into its own function
-	velocity = move_and_slide(velocity * delta) 
+	get_input(delta) # seperate this into its own function
+	var movement = move_and_slide(velocity)
+	print(movement)
