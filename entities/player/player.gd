@@ -9,6 +9,7 @@ var vel := Vector2() #character directions
 
 
 onready var rayCast = get_node("RayCast2D")
+onready var sprite = get_node("Sprite")
 
 export var speed = 200  # speed in pixels/sec
 
@@ -25,6 +26,7 @@ func get_input(delta):
 	# Make sure diagonal movement isn't faster
 
 	velocity = velocity.normalized() * speed
+	sprite.rotation = velocity.angle()
 
 func _physics_process(delta):
 	get_input(delta) # seperate this into its own function
