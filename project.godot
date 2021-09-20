@@ -14,6 +14,10 @@ config/name="Clockwork 001"
 run/main_scene="res://scenes/title/title.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://scenes/global.gd"
+
 [display]
 
 window/size/width=1366
