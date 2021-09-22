@@ -17,6 +17,8 @@ func _process(delta):
 	var seconds = fmod(run_time, 60.0)
 	run_time /= 60
 	var minutes = fmod(run_time, 60.0)
+	print(seconds)
+	print(minutes)
 	if minutes >= 1:
 		time_text = str(floor(minutes)) + ":"
 	time_text = time_text + str(stepify(seconds, 0.01))

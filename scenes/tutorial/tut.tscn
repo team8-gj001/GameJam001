@@ -2,8 +2,7 @@
 
 [ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/rusty_tiles1.png" type="Texture" id=2]
-[ext_resource path="res://scenes/tutorial/tut.png" type="Texture" id=3]
-[ext_resource path="res://scenes/tutorial/WallsCollider.gd" type="Script" id=4]
+[ext_resource path="res://scenes/tutorial/map (2).png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50.9817, 51.1033 )
@@ -16,12 +15,6 @@ extents = Vector2( 282.458, 107.503 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 69.6978, 210.709 )
-
-[sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 35.9375, 176.164 )
-
-[sub_resource type="ConcavePolygonShape2D" id=27]
-segments = PoolVector2Array( 340, -38, 476, 200, 0, 0, 0, 0, 0, 0, 0, 0 )
 
 [node name="Tutorial" type="Node2D"]
 

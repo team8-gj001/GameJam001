@@ -34,4 +34,4 @@ func get_input():
 func _physics_process(_delta):
 	get_input() # seperate this into its own function
 	var movement = move_and_slide(velocity)
-
+	print(movement)
