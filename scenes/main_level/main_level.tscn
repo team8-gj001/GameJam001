@@ -1,7 +1,7 @@
 [gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/main_level/Map man.png" type="Texture" id=2]
+[ext_resource path="res://scenes/main_level/map_man.png" type="Texture" id=2]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( 99.7603, 53.4556 )
@@ -307,7 +307,7 @@ shape = SubResource( 7 )
 position = Vector2( 82.0553, 13.0813 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/StaticBody2D8"]
-position = Vector2( 177.425, -388.144 )
+position = Vector2( 175.743, -388.144 )
 shape = SubResource( 8 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Node"]
