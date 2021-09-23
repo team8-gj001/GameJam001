@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/main_level/Map man.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 105.77, 70.3564 )
 
 [node name="Main Level" type="Node2D"]
 
@@ -161,3 +164,13 @@ polygon = PoolVector2Array( -2345.1, -5525.16, -2143.06, -5520.67, -2134.08, -55
 
 [node name="CollisionPolygon2D42" type="CollisionPolygon2D" parent="Nontrapazoids"]
 polygon = PoolVector2Array( -252.029, 294.937, 239.562, 282.223, 248.038, -56.8048, 654.871, -65.2805, 659.109, 6.76294, 523.498, 15.2385, 519.26, 277.985, 866.764, 286.461, 862.526, 6.76294, 743.866, 6.76294, 735.391, -56.8048, 1282.07, -65.2805, 1299.03, -192.416, 1493.97, -192.416, 1498.2, 2.52515, 3244.2, 6.76294, 3256.91, -340.741, 3371.33, -328.027, 3392.52, -69.5184, 3888.35, -61.0427, 3879.88, 142.374, 4307.9, 150.85, 4299.42, -332.265, 4567.94, -332.265, 4580.65, -77.9941, 5627.4, -61.0427, 5635.88, -124.61, 5690.97, -133.086, 5699.45, -344.979, 5919.82, -344.979, 5902.86, -476.352, 5703.69, -493.304, 5686.73, -616.201, 6263.08, -620.439, 6258.84, -3492.78, 6474.97, -3492.78, 6483.45, 385.632, -262.995, 377.156 )
+
+[node name="CollisionPolygon2D43" type="CollisionPolygon2D" parent="Nontrapazoids"]
+polygon = PoolVector2Array( -2771.52, -445.575, -2802.95, -427.616, -2800.7, -398.432, -2773.76, -380.473, -2737.85, -400.677, -2737.85, -425.371 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -2266.81, -403.2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 24.6941, -5.61237 )
+shape = SubResource( 1 )
