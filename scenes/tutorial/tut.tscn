@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/enemies/guard.tscn" type="PackedScene" id=2]
@@ -8,16 +8,16 @@
 [ext_resource path="res://entities/static/door.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/static/cam.tscn" type="PackedScene" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 143.89, 142.612 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 282.458, 107.503 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 69.6978, 210.709 )
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=4]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -217.544, -460.052, 0, 0, 0, 0, 620.44, -460.191, 0, 0, 0, 0, 620.44, -880.058, 0, 0, 0, 0, -218.03, -879.657, 0, 0, 0, 0, -217.544, -460.052 )
 }
@@ -27,11 +27,6 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -10.318, 2.18604, 0, 0, 0, 0, -1118.32, -8.92566, 0, 0, 0, 0, -805.606, -15.2753, 0, 0, 0, 0, -24.6046, -13.6879, 0, 0, 0, 0, -10.318, 3.77344, 0, 0, 0, 0, -10.318, 2.18604 )
 }
 
-[sub_resource type="Curve2D" id=6]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -352, -1720.75, 0, 0, 0, 0, 726.585, -1732.36, 0, 0, 0, 0, 725.466, -1729.5, 0, 0, 0, 0, -352, -1727, 0, 0, 0, 0, -352.25, -1721, 0, 0, 0, 0, -352, -1720.75 )
-}
-
 [node name="Tutorial" type="Node2D"]
 
 [node name="map (2)" type="Sprite" parent="."]
@@ -39,7 +34,7 @@ position = Vector2( 200.52, -2289.43 )
 texture = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 78.8308, -2007.61 )
+position = Vector2( 71.7034, 116.292 )
 speed = 250
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -49,23 +44,23 @@ polygon = PoolVector2Array( 970.673, -5010.03, 370.369, -5009.08, 26.6959, -5008
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( -9.72372, -670.47 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( 410.551, -670.47 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( 200.76, -3224.59 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( 96.4892, -4100.81 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( 306.263, -4100.81 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="Door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 201.063, -2592.64 )
@@ -86,7 +81,7 @@ rotation = -3.11719
 position = Vector2( 479.458, -3224.36 )
 
 [node name="GuardPath1" type="Path2D" parent="."]
-curve = SubResource( 1 )
+curve = SubResource( 4 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="GuardPath1"]
 position = Vector2( -217.544, -460.052 )
@@ -108,11 +103,14 @@ rotation = -3.13156
 [node name="StaticBody2D3" parent="Dog1/PathFollow2D" instance=ExtResource( 4 )]
 
 [node name="Dog2" type="Path2D" parent="."]
-curve = SubResource( 6 )
+position = Vector2( -358.182, -1733.39 )
+rotation = -3.133
+curve = SubResource( 5 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Dog2"]
-position = Vector2( -352, -1720.75 )
-rotation = -0.010741
+position = Vector2( -10.318, 2.18604 )
+rotation = -3.13156
 
-[node name="Dog" parent="Dog2/PathFollow2D" instance=ExtResource( 4 )]
-position = Vector2( -352.778, -1726.09 )
+[node name="StaticBody2D3" parent="Dog2/PathFollow2D" instance=ExtResource( 4 )]
+position = Vector2( 4.76721, 10.7872 )
+rotation = -0.0219885
