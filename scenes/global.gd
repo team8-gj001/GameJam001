@@ -24,7 +24,7 @@ func _d_enter_level(path):
 	get_tree().set_current_scene(current_scene) # make compatiable with godot API
 	run_time = 0.00
 
-func key_get():\
+func key_get():
 	keys += 1
 	
 func door_use():\
