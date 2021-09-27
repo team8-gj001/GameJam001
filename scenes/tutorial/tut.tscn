@@ -4,11 +4,7 @@
 [ext_resource path="res://entities/enemies/guard.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/tutorial/map (2).png" type="Texture" id=3]
 [ext_resource path="res://entities/enemies/dog.tscn" type="PackedScene" id=4]
-<<<<<<< HEAD
 [ext_resource path="res://entities/static/key.tscn" type="PackedScene" id=5]
-=======
-[ext_resource path="res://entities/static/cam.tscn" type="PackedScene" id=5]
->>>>>>> 402b38c137a3b4e16e4b36d9d061ae083c86c656
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -74,11 +70,9 @@ shape = SubResource( 4 )
 position = Vector2( 306.263, -4100.81 )
 shape = SubResource( 4 )
 
-<<<<<<< HEAD
-[node name="StaticBody2D3" parent="." instance=ExtResource( 5 )]
-position = Vector2( -394.493, -2276.16 )
-=======
 [node name="Camera" parent="." instance=ExtResource( 5 )]
 position = Vector2( 111.055, -866.1 )
 rotation = -0.000171917
->>>>>>> 402b38c137a3b4e16e4b36d9d061ae083c86c656
+
+[node name="Key" parent="." instance=ExtResource( 5 )]
+position = Vector2( -401.934, -2283.44 )
