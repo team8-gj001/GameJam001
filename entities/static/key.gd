@@ -8,11 +8,9 @@ func _ready():
 	$Sprite.visible = true
 	set_physics_process( true )
 
-func _on_Area2D_area_entered(body):
-	print("test")
+func _on_Area2D_body_entered(body):
 	if body != null:
 		if body.name == "Player":
 			get_node("/root/global").key_get()
-			set_physics_process( false )
-			$Sprite.visible = false
+			self.queue_free()
 			return
