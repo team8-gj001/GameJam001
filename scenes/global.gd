@@ -22,3 +22,6 @@ func _d_enter_level(path):
 	get_tree().get_root().add_child(current_scene)
 	get_tree().set_current_scene(current_scene) # make compatiable with godot API
 	run_time = 0.00
+
+func kill_player():
+	return
