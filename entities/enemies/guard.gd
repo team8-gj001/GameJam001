@@ -1,7 +1,5 @@
 extends StaticBody2D
 
-var velocity := Vector2.ZERO
-
 onready var rcTop = get_node("RayCastTop")
 onready var rcMid = get_node("RayCastMid")
 onready var rcBot = get_node("RayCastBot")
@@ -10,9 +8,8 @@ onready var coll = get_node("CollisionShape2D")
 onready var pathFollow = get_parent()
 
 onready var path = pathFollow.get_parent()
-export var speed = 200  # speed in pixels/sec
 
-var traverseTime = 5 # Time it takes to traverse the path
+export var traverseTime = 5 # Time it takes to traverse the path
 var t = 0 # Active time along the apth
 var pathLength = 0 # Length of the path
 

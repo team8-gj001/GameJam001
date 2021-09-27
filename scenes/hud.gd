@@ -1,13 +1,8 @@
 extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var timer
 onready var global_script = get_node("/root/global")
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	timer = self.get_node("TimerLabel")
 

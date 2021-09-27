@@ -3,9 +3,6 @@ extends KinematicBody2D
 var score := 0 #score = time? 
 
 var velocity := Vector2.ZERO
-var facingDir := Vector2() #this is so that the character will continue facing in that direction where you left them */
-var vel := Vector2() #character directions
-
 
 onready var rayCast = get_node("RayCast2D")
 onready var sprite = get_node("Sprite")

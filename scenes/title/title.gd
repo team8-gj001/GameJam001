@@ -8,9 +8,5 @@ func _ready():
 	file.close()
 	find_node("Version").set_text(ver)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 func _on_PlayButton_pressed():
 	get_node("/root/global").enter_level("res://scenes/tutorial/tut.tscn")
