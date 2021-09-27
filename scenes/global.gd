@@ -26,6 +26,11 @@ func _d_enter_level(path):
 
 func key_get():\
 	keys += 1
+	
+func door_use():\
+	keys -= 1
 
 func kill_player():
+	current_scene.find_node('Player').set_position(Vector2(-262.318,94.318))
+	
 	return

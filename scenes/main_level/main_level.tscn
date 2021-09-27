@@ -1,7 +1,7 @@
 [gd_scene load_steps=112 format=2]
 
 [ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/main_level/Map_man.png" type="Texture" id=2]
+[ext_resource path="res://scenes/main_level/map (4).png" type="Texture" id=2]
 [ext_resource path="res://assets/floors/floors.png" type="Texture" id=3]
 [ext_resource path="res://assets/vehicles/Jeep_2.png" type="Texture" id=4]
 [ext_resource path="res://entities/enemies/guard.tscn" type="PackedScene" id=5]
@@ -836,8 +836,8 @@ _data = {
 [node name="Main Level" type="Node2D"]
 
 [node name="Map man" type="Sprite" parent="."]
-position = Vector2( -17612.6, 5788.06 )
-scale = Vector2( 5.32261, 3.92412 )
+position = Vector2( -1993.66, -787.23 )
+scale = Vector2( 0.99988, 0.997376 )
 texture = ExtResource( 2 )
 offset = Vector2( 3570.53, -2241.85 )
 
@@ -1694,6 +1694,7 @@ position = Vector2( 3.14991, -2.51977 )
 shape = SubResource( 101 )
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 z_index = 1
 tile_set = SubResource( 102 )
 cell_size = Vector2( 16, 32 )
@@ -1708,8 +1709,8 @@ texture = ExtResource( 4 )
 curve = SubResource( 103 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Main_path1"]
-position = Vector2( 474, -297 )
-rotation = 0.00360034
+position = Vector2( 468.42, -288.926 )
+rotation = 0.0168141
 
 [node name="Main_guard1" parent="Main_path1/PathFollow2D" instance=ExtResource( 5 )]
 position = Vector2( -4.48962, 3.77112 )
@@ -1719,7 +1720,8 @@ z_index = 1
 curve = SubResource( 104 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Main_path2"]
-position = Vector2( -1017.96, -1110.72 )
+position = Vector2( -1016.22, -1113.91 )
+rotation = -0.052579
 
 [node name="Main_guard2" parent="Main_path2/PathFollow2D" instance=ExtResource( 5 )]
 position = Vector2( 7.13544, 0 )
@@ -1729,7 +1731,8 @@ z_index = 2
 curve = SubResource( 105 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Main_path3"]
-position = Vector2( -1593.54, -1272.45 )
+position = Vector2( -1595.32, -1271.28 )
+rotation = -0.0123547
 
 [node name="Main_guard3" parent="Main_path3/PathFollow2D" instance=ExtResource( 5 )]
 z_index = 2
@@ -1738,7 +1741,8 @@ z_index = 2
 curve = SubResource( 106 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Main_path4"]
-position = Vector2( 1634.02, -950.827 )
+position = Vector2( 1628.5, -950.977 )
+rotation = 1.58535
 
 [node name="Guard" parent="Main_path4/PathFollow2D" instance=ExtResource( 5 )]
 z_index = 2
