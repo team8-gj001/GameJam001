@@ -815,7 +815,7 @@ extents = Vector2( 39.3882, 40.1233 )
 
 [sub_resource type="Curve2D" id=103]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -85.6984, -158.675, 0, 0, 0, 0, 360.254, -163.432, 0, 0, 0, 0, 332.316, -216.357, 0, 0, 0, 0, 59.988, -227.06, 0, 0, 0, 0, -85.6984, -158.675 )
+"points": PoolVector2Array( 0, 0, 0, 0, 477.01, -296.087, 0, 0, 0, 0, 1035.35, -283.374, 0, 0, 0, 0, 1021.65, -689.624, 0, 0, 0, 0, 765.883, -668.648, 0, 0, 0, 0, 578.155, -742.984, 0, 0, 0, 0, 568.076, -933.232, 0, 0, 0, 0, 212.778, -923.152, 0, 0, 0, 0, 234.197, -541.396, 0, 0, 0, 0, 459.723, -518.718, 0, 0, 0, 0, 477.01, -296.087 )
 }
 
 [node name="Main Level" type="Node2D"]
@@ -1688,11 +1688,13 @@ tile_data = PoolIntArray( -13107146, -536870908, 0, -13107141, -536870908, 0, -1
 position = Vector2( 2901.31, -494.137 )
 texture = ExtResource( 4 )
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="Main_guard1" type="Path2D" parent="."]
 curve = SubResource( 103 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Main_guard1"]
+position = Vector2( -85.6984, -158.675 )
+rotation = -0.0106658
 
-[node name="Main_guard1" parent="Path2D/PathFollow2D" instance=ExtResource( 5 )]
-position = Vector2( -76.3274, -168.369 )
+[node name="Main_guard1" parent="Main_guard1/PathFollow2D" instance=ExtResource( 5 )]
+position = Vector2( 564.6, -130.033 )
 z_index = 1
