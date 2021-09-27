@@ -23,9 +23,6 @@ func _process(_delta):
 	t += _delta
 	pathFollow.set_offset((t/traverseTime) * pathLength)
 
-func _physics_process(_delta):
-	return
-
 func _on_Area2D_body_entered(body):
 	if body != null:
 		if body.name == "Player":

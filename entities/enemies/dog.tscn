@@ -9,7 +9,7 @@ radius = 69.5
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 59.5659, 17.2492 )
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Dog" type="StaticBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
