@@ -30,4 +30,4 @@ func _process(_delta):
 func _physics_process(_delta):
 	if rcTop.is_colliding() or rcMid.is_colliding() or rcBot.is_colliding():
 		if rcTop.get_collider().name == "Player" or rcMid.get_collider().name == "Player" or rcBot.get_collider().name == "Player":
-			print("PANIC!")
+				get_node("/root/global").kill_player()
